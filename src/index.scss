@@ -1,0 +1,66 @@
+@import "~html5-reset";
+@mixin gradient($startColor, $endColor, $orientation: ttob) {
+	background: $startColor;
+	@if $orientation == ttob {
+		background: -webkit-linear-gradient(top, #{$startColor} 0%, #{$endColor} 100%);
+		background: linear-gradient(to bottom, #{$startColor} 0%,  #{$endColor} 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$startColor}', endColorstr=' #{$endColor}', GradientType=0);
+	} @else if $orientation == ltor {
+		background: -webkit-linear-gradient(right, #{$startColor} 0%, #{$endColor} 100%);
+		background: linear-gradient(to right, #{$startColor} 0%,  #{$endColor} 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$startColor}', endColorstr=' #{$endColor}', GradientType=1);
+	}
+}
+html{
+  font-size: 62.5%;
+  body{
+    @include gradient(navy,white);
+    font-size: 1.6em;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,sans-serif;
+    .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      .title{
+        order: 3;
+        font-size: 4rem;
+        font-weight: bold;
+      }
+      .attention{
+        margin: 0;
+        height: 50vh;
+        width: 100%;
+        order: 1;
+        color: red;
+        text-align: center;
+        font-size: 8rem;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        position: relative;
+        &:after{
+          content: 'Please Occupy the Front Sheats.';
+          width: 45vw;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+        }
+      }
+      .logo-wrapper{
+        order: 2;
+        height: 100%;
+        img{
+          object-fit: contain;
+          height: 30vh;
+        }
+      }
+    }
+  }
+}
