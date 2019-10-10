@@ -1,13 +1,15 @@
 import React from 'react'
+import Count from './Count'
 import text from './../text.json'
 const App = () => {
   return(
     <div className="container">
-      <h1 className="title">{text.title}</h1>
-      <p className="attention"></p>
+      <Count />
+      <p className="attention">{text.attention}</p>
       <div className="logo-wrapper">
-        <img src={text.image_file} alt={text.image_alt} />
+        <img src={text.topImage.file} alt={text.topImage.alt} height={text.topImage.height} />
       </div>
+      <h1 className="title">{text.title}</h1>
     </div>
   )
 }

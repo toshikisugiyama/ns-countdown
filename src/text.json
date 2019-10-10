@@ -1,5 +1,9 @@
 {
   "title": "Engineering Students Presentation",
-  "image_file": "./seedkun.png",
-  "image_alt": "Seed-kun"
+  "attention": "Please Occupy the Front Sheats.",
+  "topImage": {
+    "file": "./seedkun.png",
+    "alt": "Seed-kun",
+    "height": "200px"
+  }
 }
