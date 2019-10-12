@@ -5,5 +5,10 @@
     "file": "./seedkun.png",
     "alt": "Seed-kun",
     "height": "200px"
+  },
+  "modal": {
+    "title": "What time is the presentation starting?",
+    "time": "17:00",
+    "button": "OK"
   }
 }
