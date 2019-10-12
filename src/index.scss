@@ -29,12 +29,6 @@ html{
     position: relative;
     font-family: "游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,sans-serif;
     .container{
-      width: 1024px;
-      position: fixed;
-      top: 30px;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
       display: flex;
       flex-direction: column;
       align-items: center;
