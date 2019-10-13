@@ -1,6 +1,6 @@
 const showCountdown = () => {
   let now = new Date()
-  let target = new Date(2019, 9, 12, 20, 33, 0)
+  let target = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 11, 40, 0)
   let elapsed = target - now.getTime()
   let seconds = Math.floor(elapsed/1000)
   let minuts = Math.floor(seconds/60)
