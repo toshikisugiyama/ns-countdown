@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import text from '../text.json'
-import App from './App'
 const Modal = props => {
   const [showModal, setModal] = useState('modal')
   const [hour, setHour] = useState(props.setHour)
@@ -12,8 +11,14 @@ const Modal = props => {
     return {setHour, setMinut}
   }
   const setValue = (hour, minut) => {
-    if(minut<10){
+    if(hour<10 && minut<10){
+      return "0" + hour + ":0" + minut
+    }
+    if(hour>=10 && minut<10){
       return hour + ":0" + minut
+    }
+    if(hour<10 && minut>=10){
+      return "0" + hour + minut
     }
     return hour + ":" + minut
   }
