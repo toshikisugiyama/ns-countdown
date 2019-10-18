@@ -57,11 +57,16 @@ html{
           @include tablet {
             width: 90%;
             height: 90%;
+            padding: 20px;
           }
           label[for=time]{
             padding-bottom: 40px;
             font-weight: bold;
             font-size: 2rem;
+            @include tablet{
+              text-align: center;
+              font-size: 1.5rem;
+            }
           }
           input[type=time]{
             width: 400px;
@@ -72,6 +77,11 @@ html{
             border: solid 2px;
             text-align: center;
             margin-bottom: 100px;
+            @include tablet {
+              width: 100%;
+              font-size: 5rem;
+              padding: 10px;
+            }
           }
           button{
             font-size: 2rem;
@@ -80,7 +90,10 @@ html{
             position: absolute;
             bottom: 5%;
             left: 50%;
-            transform: translate(-50%, -50%)
+            transform: translate(-50%, -50%);
+            @include tablet{
+              font-size: 1.5rem;
+            }
           }
         }
       }
@@ -103,6 +116,9 @@ html{
           font-size: 25rem;
           color: white;
           font-weight: bold;
+          @include tablet{
+            font-size: 12rem;
+          }
         }
       }
       .attention{
@@ -115,7 +131,7 @@ html{
         margin: 30px 0 0;
         @include tablet {
           font-size: 2.5rem;
-          margin: 0 0 150px;
+          margin: 0 20px 30px;
         }
       }
       .logo-wrapper{
@@ -130,6 +146,7 @@ html{
       .title{
         font-size: 4rem;
         font-weight: bold;
+        text-align: center;
         @include tablet {
           font-size: 2.8rem;
         }
