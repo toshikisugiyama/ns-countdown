@@ -18,18 +18,18 @@ const Modal = props => {
           <div className="input">
             <div className="time-container">
               <button id="pluss_hour" onClick={changePlussHour}>+</button>
-              <input id="hour" type="text" />
+              <input id="hour" type="text" readOnly />
               <button id="minus_hour" onClick={changeMinusHour}>-</button>
             </div>
             <span>:</span>
             <div className="time-container">
               <button id="pluss_minut" onClick={changePlussMinut}>+</button>
-              <input id="minut" type="text" />
+              <input id="minut" type="text" readOnly />
               <button id="minus_minut" onClick={changeMinusMinut}>-</button>
             </div>
           </div>
           <div className="button">
-            <button onClick={submit}>{text.modal.button}</button>
+            <button onClick={submit} autoFocus={true} >{text.modal.button}</button>
           </div>
         </div>
       </div>
