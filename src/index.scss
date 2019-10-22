@@ -31,6 +31,9 @@ html{
     @include tablet{
       overflow: auto;
     }
+    .no-display {
+      display: none;
+    }
     .container{
       display: flex;
       flex-direction: column;

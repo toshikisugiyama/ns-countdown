@@ -17,15 +17,15 @@ const Modal = props => {
           </p>
           <div className="input">
             <div className="time-container">
-              <button onClick={changePlussHour}>+</button>
+              <button id="pluss_hour" onClick={changePlussHour}>+</button>
               <input id="hour" type="text" />
-              <button onClick={changeMinusHour}>-</button>
+              <button id="minus_hour" onClick={changeMinusHour}>-</button>
             </div>
             <span>:</span>
             <div className="time-container">
-              <button onClick={changePlussMinut}>+</button>
+              <button id="pluss_minut" onClick={changePlussMinut}>+</button>
               <input id="minut" type="text" />
-              <button onClick={changeMinusMinut}>-</button>
+              <button id="minus_minut" onClick={changeMinusMinut}>-</button>
             </div>
           </div>
           <div className="button">
