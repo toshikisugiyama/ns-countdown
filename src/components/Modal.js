@@ -32,9 +32,9 @@ const Modal = props => {
               {text.modal.title}
             </p>
             <div className="input">
-              <input id="hour" type="number" value={hour} />
+              <input id="hour" type="number" onChange={props.onChange({hour: 1})} />
               <span>:</span>
-              <input id="minut" type="number" value={minut} />
+              <input id="minut" type="number" onChange={props.onChange({minut: 2})} />
             </div>
           </label>
           <div className="button">
