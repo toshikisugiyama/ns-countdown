@@ -4,8 +4,8 @@ import Modal from './Modal'
 import text from './../text.json'
 const App = () => {
   const [modal, setModal] = useState(true)
-  const [hour, setHour] = useState(17)
-  const [minut, setMinut] = useState(0)
+  const [hour, setHour] = useState(text.modal.defaultHour)
+  const [minut, setMinut] = useState(text.modal.defaultMinut)
   let h, m
   // 時間設定時の表示を整える
   if(hour<10 && minut<10){

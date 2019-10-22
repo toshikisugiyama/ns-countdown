@@ -8,7 +8,8 @@
   },
   "modal": {
     "title": "What time is the presentation starting?",
-    "time": "17:00",
+    "defaultHour": 17,
+    "defaultMinut": 0,
     "button": "OK"
   }
 }
