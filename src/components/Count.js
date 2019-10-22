@@ -1,8 +1,8 @@
 import React, {useState,useEffect} from 'react'
 const Count = props => {
-  const setHour = props.setHour
-  const setMinut = props.setMinut
-  const [countDown, setCountDown] = useState(CountDown(setHour,setMinut))
+  const hour = props.hour
+  const minut = props.minut
+  const [countDown, setCountDown] = useState(CountDown(hour,minut))
   useEffect(() => {
     let timerID = setInterval(
       () => tick(),
@@ -13,7 +13,7 @@ const Count = props => {
     }
   })
   const tick = () => {
-    setCountDown(CountDown(setHour,setMinut))
+    setCountDown(CountDown(hour,minut))
   }
   return(
     <div className="count">
@@ -21,9 +21,9 @@ const Count = props => {
     </div>
   )
 }
-const CountDown = (setHour,setMinut) => {
+const CountDown = (hour,minut) => {
   let now = new Date()
-  let target = new Date(now.getFullYear(), now.getMonth(), now.getDate(), setHour,setMinut, 0)
+  let target = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hour,minut, 0)
   let elapsed = target - now.getTime()
   let seconds = Math.floor(elapsed/1000)
   let minuts = Math.floor(seconds/60)
