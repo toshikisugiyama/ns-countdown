@@ -11,7 +11,13 @@
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$startColor}', endColorstr=' #{$endColor}', GradientType=1);
 	}
 }
+$sp: 400px;
 $tablet: 1024px;
+@mixin sp {
+  @media screen and (max-width: ($sp)){
+    @content;
+  }
+}
 @mixin tablet {
   @media screen and (max-width: ($tablet)) {
     @content;
@@ -39,6 +45,7 @@ html{
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      height: 100vh;
       .modal{
         &-layer{
           position: absolute;
@@ -78,6 +85,9 @@ html{
             justify-content: space-between;
             margin: 0 auto 50px;
             width: 300px;
+            @include sp{
+              width: auto;
+            }
             .time-container {
               display: flex;
               flex-direction: column;
@@ -110,21 +120,10 @@ html{
               @include tablet{
                 font-size: 1.5rem;
               }
+              @include sp{
+                width: auto;
+              }
             }
-          }
-        }
-      }
-      .modal-none{
-        .modal-layer{
-          display: none;
-        }
-        .modal-contents{
-          opacity: 0;
-          transition: opacity 0.8s;
-          label,
-          input,
-          button{
-            cursor: default;
           }
         }
       }
@@ -135,6 +134,9 @@ html{
           font-weight: bold;
           @include tablet{
             font-size: 12rem;
+          }
+          @include sp{
+            font-size: 6rem;
           }
         }
       }
@@ -152,7 +154,6 @@ html{
         }
       }
       .logo-wrapper{
-        height: 100%;
         img{
           object-fit: contain;
           @include tablet {
