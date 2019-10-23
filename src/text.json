@@ -2,7 +2,7 @@
   "title": "Engineering Students Presentation",
   "attention": "Please Occupy the Front Sheats.",
   "topImage": {
-    "file": "./seedkun.png",
+    "src": "./seedkun.png",
     "alt": "Seed-kun",
     "height": "200px"
   },
@@ -11,5 +11,45 @@
     "defaultHour": 17,
     "defaultMinut": 0,
     "button": "OK"
+  },
+  "notification": {
+    "title": "Notification",
+    "image": {
+      "src": "./img/logo.png",
+      "alt": "logo",
+      "height": "80px"
+    },
+    "notificationImg": {
+      "src": "./img/notification.png",
+      "alt": "notification",
+      "height": "40px"
+    },
+    "picture": {
+      "text1": "We will take pictures and upload to SNS. ",
+      "text2": "If you don't like, don't hesitate to tell us.",
+      "image": {
+        "src": "./img/picture.png",
+        "alt": "picture",
+        "height": "100px"
+      }
+    },
+    "question": {
+      "text1": "We have Q&A time after each presentation.",
+      "text2": "Please feel free to ask any questions.",
+      "image": {
+        "src": "./img/question.png",
+        "alt": "question",
+        "height": "100px"
+      }
+    },
+    "feedback": {
+      "text1": "Please fill out the feed back form for presenters.",
+      "text2": "Don't forget to write your name on the space provided.",
+      "image": {
+        "src": "./img/feedback.jpg",
+        "alt": "feedback form",
+        "height": "200px"
+      }
+    }
   }
 }

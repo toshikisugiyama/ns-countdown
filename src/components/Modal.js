@@ -9,7 +9,7 @@ const Modal = props => {
   const submit = props.submit
   if(modal===true){
     return(
-      <div>
+      <div className="modal">
         <div className="modal-layer"></div>
         <div className="modal-contents">
           <p>
