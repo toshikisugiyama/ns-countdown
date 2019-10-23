@@ -79,9 +79,9 @@ const App = () => {
   const handleSubmitButton = () => {
     setModal(false)
   }
-  // 時間プラス（24時はより後には設定できないようにする）
+  // 時間プラス（23時はより後には設定できないようにする）
   const handlePlussHour = () => {
-    if(hour >= 24) {return}
+    if(hour >= 23) {return}
     setHour(hour + 1)
   }
   // 時間マイナス（0時より前には設定できないようにする）
