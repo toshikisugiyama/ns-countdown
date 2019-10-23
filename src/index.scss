@@ -191,7 +191,8 @@ html{
           transform: translate(-80%, -80%);
           opacity: 0.6;
           @include tablet{
-            transform: translate(30%, 0);
+            transform: translate(80%, 0);
+            height: 16px;
           }
         }
         &>.image-wrapper{
@@ -199,7 +200,7 @@ html{
           img{
             object-fit: contain;
             @include tablet{
-              height: 80px;
+              height: 30px;
             }
           }
         }
@@ -211,8 +212,8 @@ html{
           transform: translateY(-50%);
           @include tablet{
             transform: translateY(0);
-            margin-bottom: 30px;
-            font-size: 3rem;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
             text-align: center;
           }
         }
@@ -237,7 +238,7 @@ html{
             &>div{
               @include tablet{
                 width: 100%;
-                padding-top: 50px;
+                padding-top: 10px;
               }
             }
             &>.image-wrapper{
@@ -246,9 +247,13 @@ html{
               text-align: right;
               @include tablet{
                 text-align: center;
+                padding: 10px 20px 20px;
               }
               img{
                 object-fit: contain;
+                @include tablet{
+                  height: 50px;
+                }
               }
             }
           }
@@ -266,7 +271,7 @@ html{
             &>div{
               @include tablet{
                 width: 100%;
-                padding-top: 50px;
+                padding-top: 10px;
               }
             }
             &>.image-wrapper{
@@ -275,9 +280,13 @@ html{
               text-align: right;
               @include tablet{
                 text-align: center;
+                padding: 10px 20px 20px;
               }
               img{
                 object-fit: contain;
+                @include tablet{
+                  height: 50px;
+                }
               }
             }
             @include tablet{
@@ -298,7 +307,7 @@ html{
             }
             &>div{
               @include tablet{
-                padding-top: 50px;
+                padding-top: 10px;
               }
             }
             &>.image-wrapper{
@@ -307,7 +316,7 @@ html{
               @include tablet{
                 text-align: center;
                 width: 100%;
-                padding: 20px 0 0;
+                padding: 10px 0 0;
               }
               img{
                 object-fit: contain;
