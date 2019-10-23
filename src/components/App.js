@@ -1,9 +1,10 @@
 import React,{useState, useEffect} from 'react'
-import Count from './Count'
 import Modal from './Modal'
+import FrontPage from './FrontPage'
+import Notification from './Notification'
 import text from './../text.json'
 const App = () => {
-  const [modal, setModal] = useState(true)
+  const [modal, setModal] = useState(false)
   const [hour, setHour] = useState(text.modal.defaultHour)
   const [minut, setMinut] = useState(text.modal.defaultMinut)
   let h, m
@@ -102,18 +103,13 @@ const App = () => {
         changeMinusMinut={handleMinusMinut}
         submit={handleSubmitButton}
       />
-      <Count
+      {/* <FrontPage
         countDown={countDown}
+      /> */}
+      <Notification
+        hour={hour}
+        minut={minut}
       />
-      <p className="attention">{text.attention}</p>
-      <div className="logo-wrapper">
-        <img
-          src={text.topImage.file}
-          alt={text.topImage.alt}
-          height={text.topImage.height}
-        />
-      </div>
-      <h1 className="title">{text.title}</h1>
     </div>
   )
 }
