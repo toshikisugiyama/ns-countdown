@@ -1,6 +1,9 @@
 import React from 'react'
 import text from './../text.json'
-const Notification = () => {
+const Notification = props => {
+  if(props.notification===false){
+    return <div></div>
+  }
   return(
     <div className="notification">
       <div className="image-wrapper">

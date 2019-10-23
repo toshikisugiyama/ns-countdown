@@ -2,6 +2,9 @@ import React from 'react'
 import Count from './Count'
 import text from './../text.json'
 const FrontPage = props => {
+  if(props.notification===true){
+    return <div></div>
+  }
   return(
     <div className="frontpage">
       <Count

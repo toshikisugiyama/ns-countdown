@@ -207,7 +207,11 @@ html{
           padding: 15px;
           font-size: 4.5rem;
           font-weight: bold;
+          position: relative;
+          transform: translateY(-50%);
           @include tablet{
+            transform: translateY(0);
+            margin-bottom: 30px;
             font-size: 3rem;
           }
         }

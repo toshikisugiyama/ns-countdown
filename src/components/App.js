@@ -4,9 +4,10 @@ import FrontPage from './FrontPage'
 import Notification from './Notification'
 import text from './../text.json'
 const App = () => {
-  const [modal, setModal] = useState(false)
+  const [modal, setModal] = useState(true)
   const [hour, setHour] = useState(text.modal.defaultHour)
   const [minut, setMinut] = useState(text.modal.defaultMinut)
+  const [notification, setNotification] = useState(false)
   let h, m
   // 時間設定時の表示を整える
   if(hour<10 && minut<10){
@@ -69,6 +70,11 @@ const App = () => {
       }
     }
   })
+  const handleNotification = () => {
+    if(modal===false && min==='00' && sec==='00'){
+      setNotification(true)
+    }
+  }
   // OKボタンを押すとモーダルを閉じる
   const handleSubmitButton = () => {
     setModal(false)
@@ -94,7 +100,7 @@ const App = () => {
     setMinut(minut - 1)
   }
   return(
-    <div className="container">
+    <div className="container" onClick={handleNotification}>
       <Modal
         modal={modal}
         changePlussHour={handlePlussHour}
@@ -103,12 +109,12 @@ const App = () => {
         changeMinusMinut={handleMinusMinut}
         submit={handleSubmitButton}
       />
-      {/* <FrontPage
+      <FrontPage
         countDown={countDown}
-      /> */}
+        notification={notification}
+      />
       <Notification
-        hour={hour}
-        minut={minut}
+        notification={notification}
       />
     </div>
   )
