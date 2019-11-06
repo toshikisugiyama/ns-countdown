@@ -1,3 +1,19 @@
+# 発表会開始までのカウントダウン
+
+React を使用。
+
+### 環境
+
+- node v10.15.3
+- npm 6.11.3
+- react 16.10.2
+
+---
+
+![screen](https://github.com/toshikisugiyama/ns-countdown/blob/v2.0/screen.jpg "screen")
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
