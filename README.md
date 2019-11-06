@@ -10,7 +10,7 @@ React を使用。
 
 ---
 
-![screen]( "screen")
+![screen](https://github.com/toshikisugiyama/ns-countdown/blob/v2.0/screen.jpg "screen")
 
 ---
 
